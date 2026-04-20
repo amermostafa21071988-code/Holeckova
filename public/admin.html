@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة الإدارة المتقدمة</title>
+<script src="/socket.io/socket.io.js"></script>
+
+<style>
+body{
+    font-family:tahoma;
+    background:#0f172a;
+    color:#fff;
+    margin:0;
+    padding:20px;
+}
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#f8fafc;
+}
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+.stats{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+.stat-box{
+    background:#1e293b;
+    padding:12px 20px;
+    border-radius:12px;
+    text-align:center;
+    min-width:120px;
+}
+.search-box input{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    width:250px;
+}
+.sound-btn{
+    background:#ef4444;
+    color:#fff;
+    border:none;
+    padding:10px 18px;
+    border-radius:10px;
+    cursor:pointer;
+}
+.order{
+    background:#1e293b;
+    padding:18px;
+    margin-bottom:18px;
+    border-radius:16px;
+    transition:.3s;
+    border:1px solid #334155;
+}
+.order:hover{
+    transform:translateY(-3px);
+}
+.badge{
+    background:red;
+    color:#fff;
+    padding:4px 9px;
+    border-radius:50%;
+    font-size:12px;
+}
+.images{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:12px;
+}
+.images img{
+    width:100px;
+    height:80px;
+    object-fit:cover;
+    border-radius:10px;
+    cursor:pointer;
+    border:2px solid #334155;
+}
+.chat{
+    background:#fff;
+    color:#000;
+    padding:10px;
+    border-radius:12px;
+    margin-top:10px;
+}
+.chat-box{
+    height:250px;
+    overflow:auto;
+    background:#f8fafc;
+    padding:10px;
+    border-radius:8px;
+}
+.typing{
+    display:none;
+    color:#10b981;
+    font-size:12px;
+    padding:4px;
+}
+.message-row{
+    display:flex;
+    margin:8px 0;
+}
+.message-row.client{justify-content:flex-end;}
+.message-row.admin{justify-content:flex-start;}
+.message{
+    max-width:75%;
+    padding:10px 14px;
+    border-radius:14px;
+    word-break:break-word;
+}
+.client .message{background:#dbeafe;}
+.admin .message{background:#dcfce7;}
+.msg-time{
+    display:block;
+    font-size:11px;
+    color:#64748b;
+    margin-top:5px;
+}
+.reply-box{
+    display:flex;
+    gap:8px;
+    margin-top:8px;
+}
+.reply-box input{
+    flex:1;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+button{
+    border:none;
+    cursor:pointer;
+}
+.reply-box button,.action-btn{
+    padding:10px;
+    background:#10b981;
+    color:#fff;
+    border-radius:8px;
+    margin-top:8px;
+}
+.delete-btn{
+    background:#dc2626;
+}
+.copy-btn{
+    background:#3b82f6;
+}
+.highlight{
+    border:2px solid #facc15;
+    box-shadow:0 0 20px #facc15;
+}
+.action-row{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:8px;
+    margin-top:10px;
+}
+</style>
+</head>
+<body>
+
+<h2>🛠️ لوحة الإدارة المتقدمة</h2>
+
+<div class="top-bar">
+    <div class="stats">
+        <div class="stat-box">
+            <div>📦 الطلبات</div>
+            <strong id="totalOrders">0</strong>
+        </div>
+        <div class="stat-box">
+            <div>🚚 السائقين</div>
+            <strong id="totalDrivers">5</strong>
+        </div>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="بحث برقم العميل..." onkeyup="filterOrders()">
+    </div>
+
+    <button class="sound-btn" onclick="toggleSound()" id="soundBtn">🔊 الصوت مفعل</button>
+</div>
+
+<div id="orders"></div>
+
+<div id="imageModal" onclick="closeImage()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);justify-content:center;align-items:center;z-index:9999;">
+    <img id="modalImg" style="max-width:90%;max-height:90%;border-radius:12px;">
+</div>
+
+<script>
+const socket = io();
+const ordersDiv = document.getElementById("orders");
+let soundEnabled = true;
+let typingTimers = {};
+window.allOrders = [];
+
+function updateStats(){
+    document.getElementById("totalOrders").innerText = allOrders.length;
+}
+
+function filterOrders(){
+    const q = searchInput.value.trim();
+    document.querySelectorAll(".order").forEach(card=>{
+        card.style.display = card.innerText.includes(q) ? "block" : "none";
+    });
+}
+
+function toggleSound(){
+    soundEnabled=!soundEnabled;
+    soundBtn.innerText=soundEnabled?"🔊 الصوت مفعل":"🔇 الصوت مكتوم";
+}
+
+function playSound(){
+    if(!soundEnabled) return;
+    new Audio("https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg").play().catch(()=>{});
+}
+
+function openImage(src){
+    document.getElementById("modalImg").src = src;
+    document.getElementById("imageModal").style.display = "flex";
+}
+
+function closeImage(){
+    document.getElementById("imageModal").style.display = "none";
+}
+
+function copyPhone(phone){
+    navigator.clipboard.writeText(phone);
+    alert("تم نسخ الرقم");
+}
+
+function deleteOrder(id){
+    if(!confirm("حذف الطلب؟")) return;
+    document.getElementById("order-"+id)?.remove();
+    allOrders = allOrders.filter(o=>o.id!==id);
+    updateStats();
+}
+
+function appendMessage(room,data){
+    const box=document.getElementById("chat-"+room);
+    if(!box) return;
+    const row=document.createElement("div");
+    row.className="message-row "+(data.sender==="🛠 الإدارة"?"admin":"client");
+    row.innerHTML=`
+        <div class="message">
+            <strong>${data.sender}</strong><br>
+            ${data.text}
+            <span class="msg-time">${data.time||""}</span>
+        </div>
+    `;
+    box.appendChild(row);
+    box.scrollTop=box.scrollHeight;
+}
+
+function sendReply(room){
+    const input=document.getElementById("msg-"+room);
+    const text=input.value.trim();
+    if(!text) return;
+    socket.emit("adminMessage",{room,text});
+    input.value="";
+}
+
+function markArrived(room){
+    socket.emit("adminMessage",{ room, text:`✅ السائق وصل إلى موقعك الآن.` });
+}
+
+function createOrder(order){
+    let div=document.getElementById("order-"+order.id);
+    if(!div){
+        div=document.createElement("div");
+        div.className="order";
+        div.id="order-"+order.id;
+        ordersDiv.prepend(div);
+    }
+
+    let imagesHTML = "";
+    if(order.images && order.images.length){
+        imagesHTML = `
+            <div class="images">
+                ${order.images.map(img=>`
+                    <img src="${img}" onclick="openImage('${img}')">
+                `).join("")}
+            </div>
+        `;
+    }
+
+    div.innerHTML=`
+        <h3>📋 طلب ${order.unreadAdmin>0?`<span class="badge">${order.unreadAdmin}</span>`:""}</h3>
+        <p>📱 ${order.phone}</p>
+        <p>🚗 ${order.service}</p>
+        <p>🛠️ ${order.problem}</p>
+        <p>📍 ${order.location||"-"}</p>
+
+        ${imagesHTML}
+
+        <div class="action-row">
+            <button class="action-btn copy-btn" onclick="copyPhone('${order.phone}')">📋 نسخ الرقم</button>
+            <button class="action-btn" onclick="markArrived('${order.id}')">✅ تم الوصول</button>
+            <button class="action-btn delete-btn" onclick="deleteOrder('${order.id}')">🗑 حذف الطلب</button>
+        </div>
+
+        <div class="chat">
+            <div class="chat-box" id="chat-${order.id}"></div>
+            <div class="typing" id="typing-${order.id}">⌨️ العميل يكتب الآن...</div>
+            <div class="reply-box">
+                <input id="msg-${order.id}" placeholder="رد الإدارة"
+                onkeypress="if(event.key==='Enter'){sendReply('${order.id}')}" />
+                <button onclick="sendReply('${order.id}')">إرسال</button>
+            </div>
+        </div>
+    `;
+
+    const box=document.getElementById("chat-"+order.id);
+    box.innerHTML="";
+    (order.chat||[]).forEach(msg=>appendMessage(order.id,msg));
+}
+
+fetch("/api/orders")
+.then(r=>r.json())
+.then(data=>{
+    allOrders=data;
+    data.forEach(createOrder);
+    updateStats();
+});
+
+socket.on("newOrder",order=>{
+    allOrders.unshift(order);
+    createOrder(order);
+    updateStats();
+    playSound();
+});
+
+socket.on("newMessage",data=>{
+    appendMessage(data.room,data);
+});
+
+socket.on("typing",data=>{
+    const el=document.getElementById("typing-"+data.room);
+    if(!el) return;
+    el.style.display="block";
+    clearTimeout(typingTimers[data.room]);
+    typingTimers[data.room]=setTimeout(()=>{
+        el.style.display="none";
+    },2000);
+});
+</script>
+
+</body>
+</html>

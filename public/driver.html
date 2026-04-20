@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صفحة السائق</title>
+<script src="/socket.io/socket.io.js"></script>
+
+<style>
+body{
+    font-family:tahoma;
+    background:#0f172a;
+    color:#fff;
+    text-align:center;
+    padding:30px;
+}
+.card{
+    max-width:420px;
+    margin:auto;
+    background:#1e293b;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(0,0,0,.35);
+}
+h2{
+    margin-bottom:20px;
+}
+.driver-photo{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #10b981;
+    margin-bottom:15px;
+}
+.status{
+    margin-top:20px;
+    padding:14px;
+    border-radius:12px;
+    background:#10b981;
+    font-size:18px;
+    font-weight:bold;
+}
+.info{
+    background:#334155;
+    padding:12px;
+    border-radius:12px;
+    margin:10px 0;
+    font-size:16px;
+}
+.buttons{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+.btn{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+}
+.stop-btn{background:#ef4444}
+.start-btn{background:#2563eb}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h2>🚚 تتبع السائق المباشر</h2>
+
+    <img id="driverPhoto" class="driver-photo">
+
+    <div class="info" id="driverName">السائق: ...</div>
+    <div class="info" id="orderNumber">رقم الطلب: ...</div>
+    <div class="info" id="batteryInfo">🔋 البطارية: ...</div>
+    <div class="info" id="lastUpdate">🕒 آخر تحديث: ...</div>
+
+    <div class="status" id="statusText">
+        جاري تشغيل التتبع...
+    </div>
+
+    <div class="buttons">
+        <button class="btn start-btn" onclick="startTracking()">
+            ▶️ تشغيل
+        </button>
+
+        <button class="btn stop-btn" onclick="stopTracking()">
+            ⛔ إيقاف
+        </button>
+    </div>
+</div>
+
+<script>
+const socket = io();
+
+const params = new URLSearchParams(window.location.search);
+const orderId = params.get("room");
+const driver = params.get("driver");
+
+let watchId = null;
+
+const driverImages = {
+    "احمد":"https://i.imgur.com/1X6V9Yj.png",
+    "محمد":"https://i.imgur.com/3QZ7K8a.png",
+    "ابراهيم":"https://i.imgur.com/6jY9B2m.png",
+    "محمود":"https://i.imgur.com/L4f7R2s.png",
+    "سند":"https://i.imgur.com/qW8T4bM.png"
+};
+
+document.getElementById("driverName").innerText = "السائق: " + (driver || "-");
+document.getElementById("orderNumber").innerText = "رقم الطلب: " + (orderId || "-");
+document.getElementById("driverPhoto").src =
+    driverImages[driver] || "https://i.imgur.com/default-avatar.png";
+
+if(!orderId){
+    document.getElementById("statusText").innerText = "❌ لا يوجد رقم طلب";
+}else{
+    startTracking();
+}
+
+async function updateBattery(){
+    if(navigator.getBattery){
+        const battery = await navigator.getBattery();
+        const percent = Math.round(battery.level * 100);
+        document.getElementById("batteryInfo").innerText =
+            "🔋 البطارية: " + percent + "%";
+    }else{
+        document.getElementById("batteryInfo").innerText =
+            "🔋 البطارية: غير متاحة";
+    }
+}
+
+function updateTime(){
+    const now = new Date().toLocaleTimeString("ar-EG");
+    document.getElementById("lastUpdate").innerText =
+        "🕒 آخر تحديث: " + now;
+}
+
+function startTracking(){
+    if(watchId !== null) return;
+
+    if(!navigator.geolocation){
+        statusText.innerText = "❌ المتصفح لا يدعم GPS";
+        return;
+    }
+
+    watchId = navigator.geolocation.watchPosition(
+        position=>{
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+
+            socket.emit("driverLocation",{
+                orderId: orderId,
+                driver: driver,
+                driverImage: driverImages[driver] || "",
+                lat: lat,
+                lng: lng
+            });
+
+            updateBattery();
+            updateTime();
+
+            document.getElementById("statusText").innerText =
+                "✅ يتم إرسال الموقع مباشرة";
+        },
+        error=>{
+            document.getElementById("statusText").innerText =
+                "❌ يجب تفعيل GPS";
+        },
+        {
+            enableHighAccuracy:true,
+            maximumAge:3000,
+            timeout:10000
+        }
+    );
+}
+
+function stopTracking(){
+    if(watchId !== null){
+        navigator.geolocation.clearWatch(watchId);
+        watchId = null;
+    }
+
+    document.getElementById("statusText").innerText =
+        "⛔ تم إيقاف إرسال الموقع";
+}
+
+updateBattery();
+</script>
+
+</body>
+</html>

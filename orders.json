@@ -1,0 +1,758 @@
+[
+  {
+    "id": "ORD-1776635375844",
+    "phone": "01030927397",
+    "service": "🔋 بطارية",
+    "problem": "بطاريه ",
+    "location": "",
+    "lat": "",
+    "lng": "",
+    "status": "جديد",
+    "driver": "",
+    "images": [
+      "/uploads/1776635259527-image.jpg",
+      "/uploads/1776635295425-image.jpg",
+      "/uploads/1776635318269-image.jpg",
+      "/uploads/1776635360689-image.jpg"
+    ],
+    "chat": [
+      {
+        "sender": "🛠 الإدارة",
+        "text": "بقعل",
+        "time": "١٩‏/٤‏/٢٠٢٦، ١١:٥٠:١٩ م"
+      }
+    ],
+    "unreadAdmin": 0,
+    "date": "١٩‏/٤‏/٢٠٢٦",
+    "time": "١١:٤٩ م",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ١١:٥٠:١٩ م"
+  },
+  {
+    "id": 1775730358573,
+    "phone": "92535711",
+    "service": "🚗 سحب السيارات",
+    "problem": "gg",
+    "location": "📍 30.007864724404655 , 31.123756248493887",
+    "status": "جديد",
+    "driver": null,
+    "date": "2026-04-09T10:25:58.573Z"
+  },
+  {
+    "id": "1776564238847",
+    "phone": "92535711",
+    "service": "🚚 نقل سيارات",
+    "problem": "يييييييي",
+    "location": "📍 30.007883 , 31.124018",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٤:٠٣:٥٨ ص",
+    "images": {
+      "front": "/uploads/1776564238829-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "",
+      "right": "",
+      "left": ""
+    },
+    "chat": [
+      {
+        "sender": "client",
+        "text": "يييييييي",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:٠٤:٠١ ص"
+      },
+      {
+        "sender": "admin",
+        "text": "ؤؤؤؤب",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:١٥:١٤ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776564255725",
+    "phone": "92535711",
+    "service": "🚚 نقل سيارات",
+    "problem": "يييييييي",
+    "location": "📍 30.007883 , 31.124018",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٤:٠٤:١٥ ص",
+    "images": {
+      "front": "/uploads/1776564255715-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "",
+      "right": "",
+      "left": ""
+    },
+    "chat": [
+      {
+        "sender": "admin",
+        "text": "باااااااا",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:٠٤:٤٣ ص"
+      },
+      {
+        "sender": "client",
+        "text": "رررررررررر",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:٠٤:٥٠ ص"
+      },
+      {
+        "sender": "client",
+        "text": "ققققققققق",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:٠٨:٥٦ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776564543343",
+    "phone": "92535711",
+    "service": "🚚 نقل سيارات",
+    "problem": "قققققققق",
+    "location": "📍 30.00787 , 31.123743",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٤:٠٩:٠٣ ص",
+    "images": {
+      "front": "/uploads/1776564543333-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "",
+      "right": "",
+      "left": ""
+    },
+    "chat": [
+      {
+        "sender": "client",
+        "text": "ققققققققققققق",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:٠٩:٠٦ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776564862734",
+    "phone": "92535711",
+    "service": "🚚 نقل سيارات",
+    "problem": "يييييييييي",
+    "location": "📍 30.007885 , 31.123756",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٤:١٤:٢٢ ص",
+    "images": {
+      "front": "/uploads/1776564862728-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "",
+      "right": "",
+      "left": ""
+    },
+    "chat": [
+      {
+        "sender": "client",
+        "text": "ؤببببببب",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:١٤:٢٦ ص"
+      },
+      {
+        "sender": "client",
+        "text": "ؤؤؤؤؤؤؤؤؤؤؤؤؤؤؤؤؤؤؤؤؤؤؤؤؤؤ",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:١٤:٥٩ ص"
+      },
+      {
+        "sender": "admin",
+        "text": "ييييييييي",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:١٨:٠٤ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776565725311",
+    "phone": "92535711",
+    "service": "🚚 نقل سيارات",
+    "problem": "ببببببببب",
+    "location": "📍 30.00787 , 31.123743",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٤:٢٨:٤٥ ص",
+    "images": {
+      "front": "/uploads/1776565725283-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "",
+      "right": "",
+      "left": ""
+    },
+    "chat": [
+      {
+        "sender": "client",
+        "text": "ييييييييييييييييييي",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:٢٨:٤٧ ص"
+      },
+      {
+        "sender": "admin",
+        "text": "بببببببببب",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:٢٩:٠٦ ص"
+      },
+      {
+        "sender": "admin",
+        "text": "ااااااااااااااا",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:٣٥:٠٨ ص"
+      },
+      {
+        "sender": "client",
+        "text": "الو",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:٣٥:٢٠ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776566131848",
+    "phone": "92535711",
+    "service": "🚚 نقل سيارات",
+    "problem": "ببببببببب",
+    "location": "📍 30.00787 , 31.123743",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٤:٣٥:٣١ ص",
+    "images": {
+      "front": "/uploads/1776566131843-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "",
+      "right": "",
+      "left": ""
+    },
+    "chat": [
+      {
+        "sender": "client",
+        "text": "الووووووووووووووووووووو",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:٣٦:٠٦ ص"
+      },
+      {
+        "sender": "admin",
+        "text": "تتتتتتتتتتتتتتتتتت",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:٣٦:٢١ ص"
+      },
+      {
+        "sender": "client",
+        "text": "الللللللللللللللللللللللللللللللللللل",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٤:٣٦:٣٣ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776570577565",
+    "phone": "92535711",
+    "service": "🚗 سحب السيارات",
+    "problem": "bvvvvvvvvvvvvv",
+    "location": "📍 30.00787 , 31.123743",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٥:٤٩:٣٧ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ٥:٥٠:٤٦ ص",
+    "unreadAdmin": 0,
+    "images": {
+      "front": "/uploads/1776570577380-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "",
+      "right": "",
+      "left": ""
+    },
+    "chat": [
+      {
+        "sender": "👤 العميل",
+        "text": "jjjjjjjjjjjjjjjjjjjjjjjj",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٥:٤٩:٤٠ ص"
+      },
+      {
+        "sender": "🛠 الإدارة",
+        "text": "mmmmmmmmmmmmmmmm",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٥:٤٩:٥٦ ص"
+      },
+      {
+        "sender": "👤 العميل",
+        "text": "pppppppppppp",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٥:٥٠:٣٠ ص"
+      },
+      {
+        "sender": "🛠 الإدارة",
+        "text": "hgchc",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٥:٥٠:٤٦ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776570834155",
+    "phone": "92535711",
+    "service": "🚗 سحب السيارات",
+    "problem": "bvvvvvvvvvvvvv",
+    "location": "📍 30.00787 , 31.123743",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٥:٥٣:٥٤ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ٥:٥٦:٣٥ ص",
+    "unreadAdmin": 0,
+    "images": {
+      "front": "/uploads/1776570834148-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "",
+      "right": "",
+      "left": ""
+    },
+    "chat": [
+      {
+        "sender": "👤 العميل",
+        "text": "اااااااااااااااااااااا",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٥:٥٤:٠٠ ص"
+      },
+      {
+        "sender": "🛠 الإدارة",
+        "text": "اااااااااااااااا",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٥:٥٤:٢٢ ص"
+      },
+      {
+        "sender": "👤 العميل",
+        "text": "ةةةةةةةةةةةةةةةةةةة",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٥:٥٤:٣٦ ص"
+      },
+      {
+        "sender": "🛠 الإدارة",
+        "text": "اااااااااااااااااا",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٥:٥٦:٣٥ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776570998344",
+    "phone": "92535711",
+    "service": "🚗 سحب السيارات",
+    "problem": "bvvvvvvvvvvvvv",
+    "location": "📍 30.00787 , 31.123743",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٥:٥٦:٣٨ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ٥:٥٧:٠١ ص",
+    "unreadAdmin": 1,
+    "images": {
+      "front": "/uploads/1776570998329-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "",
+      "right": "",
+      "left": ""
+    },
+    "chat": [
+      {
+        "sender": "👤 العميل",
+        "text": "خننننننننننننننننننننننننننننننننننن",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٥:٥٦:٤٥ ص"
+      },
+      {
+        "sender": "🛠 الإدارة",
+        "text": "خن",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٥:٥٧:٠١ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776579380351",
+    "phone": "92535711",
+    "service": "🚚 نقل سيارات",
+    "problem": "jjjjjjjjjj",
+    "location": "📍 30.00787 , 31.123743",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٨:١٦:٢٠ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ٨:١٧:٠٤ ص",
+    "unreadAdmin": 1,
+    "images": {
+      "front": "/uploads/1776579380305-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "",
+      "right": "",
+      "left": ""
+    },
+    "chat": [
+      {
+        "sender": "👤 العميل",
+        "text": "hhhhhhhhhhhhh",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٨:١٦:٢٦ ص"
+      },
+      {
+        "sender": "🛠 الإدارة",
+        "text": "kkkkkkkkkkkk",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٨:١٧:٠٤ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776580025900",
+    "phone": "92535711",
+    "service": "🚚 نقل سيارات",
+    "problem": "jjjjjjjjjj",
+    "location": "📍 30.00787 , 31.123743",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٨:٢٧:٠٥ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ٨:٢٧:٠٥ ص",
+    "unreadAdmin": 0,
+    "images": {
+      "front": "/uploads/1776580025888-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "",
+      "right": "",
+      "left": ""
+    },
+    "chat": []
+  },
+  {
+    "id": "1776580066740",
+    "phone": "92535711",
+    "service": "🚗 سحب السيارات",
+    "problem": "ءءءءءءءءءء",
+    "location": "📍 30.007904 , 31.12376",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٨:٢٧:٤٦ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ٨:٢٧:٤٦ ص",
+    "unreadAdmin": 0,
+    "images": {
+      "front": "/uploads/1776580066727-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "",
+      "right": "",
+      "left": ""
+    },
+    "chat": []
+  },
+  {
+    "id": "1776580102595",
+    "phone": "92535711",
+    "service": "🚗 سحب السيارات",
+    "problem": "ءءءءءءءءءء",
+    "location": "📍 30.007904 , 31.12376",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٨:٢٨:٢٢ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ٨:٢٨:٢٢ ص",
+    "unreadAdmin": 0,
+    "images": {
+      "front": "/uploads/1776580102588-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "",
+      "right": "",
+      "left": ""
+    },
+    "chat": []
+  },
+  {
+    "id": "1776580745561",
+    "phone": "92535711",
+    "service": "🔋 بطارية",
+    "problem": "ررررر",
+    "location": "📍 30.007872 , 31.123751",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٨:٣٩:٠٥ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ٨:٣٩:٥٥ ص",
+    "unreadAdmin": 2,
+    "images": {
+      "front": "/uploads/1776580745512-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "/uploads/1776580745522-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "right": "/uploads/1776580745530-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "left": "/uploads/1776580745548-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg"
+    },
+    "chat": [
+      {
+        "sender": "👤 العميل",
+        "text": "ئئئئئئئئئئئئئئئئئئئئئئئئئئئئئئئئئئئئئئئئئئئئ",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٨:٣٩:١٢ ص"
+      },
+      {
+        "sender": "🛠 الإدارة",
+        "text": "اااااااااااااااااااااااااااااااااااااااااا",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٨:٣٩:٢٦ ص"
+      },
+      {
+        "sender": "👤 العميل",
+        "text": "ثثثثثثثثثثثثثثثثثثثث",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٨:٣٩:٤٢ ص"
+      },
+      {
+        "sender": "🛠 الإدارة",
+        "text": "لالالالالالالالالالالالالالالالالالالالالالالالالالالالالا",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٨:٣٩:٥٥ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776580833126",
+    "phone": "92535711",
+    "service": "🔋 بطارية",
+    "problem": "ررررر",
+    "location": "📍 30.007872 , 31.123751",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٨:٤٠:٣٣ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ٨:٤٠:٣٣ ص",
+    "unreadAdmin": 0,
+    "images": {
+      "front": "/uploads/1776580833102-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "/uploads/1776580833107-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "right": "/uploads/1776580833113-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "left": "/uploads/1776580833120-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg"
+    },
+    "chat": []
+  },
+  {
+    "id": "1776580838032",
+    "phone": "92535711",
+    "service": "🔋 بطارية",
+    "problem": "ررررر",
+    "location": "📍 30.007872 , 31.123751",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٨:٤٠:٣٨ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ٨:٤٠:٣٨ ص",
+    "unreadAdmin": 0,
+    "images": {
+      "front": "/uploads/1776580838008-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "back": "/uploads/1776580838011-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "right": "/uploads/1776580838019-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "left": "/uploads/1776580838024-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg"
+    },
+    "chat": []
+  },
+  {
+    "id": "1776580968330",
+    "phone": "",
+    "service": "",
+    "problem": "",
+    "location": "📍 30.007881 , 31.123768",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٨:٤٢:٤٨ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ٨:٤٢:٤٨ ص",
+    "unreadAdmin": 0,
+    "images": {
+      "front": "",
+      "back": "",
+      "right": "",
+      "left": ""
+    },
+    "chat": []
+  },
+  {
+    "id": "1776582045054",
+    "phone": "92535711",
+    "service": "🚗 سحب السيارات",
+    "problem": "node server.js\r\n",
+    "location": "📍 30.007701 , 31.123963500000002",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٩:٠٠:٤٤ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ٩:٠٠:٤٤ ص",
+    "unreadAdmin": 0,
+    "images": [],
+    "chat": []
+  },
+  {
+    "id": "1776582099658",
+    "phone": "92535711",
+    "service": "🆘 إنقاذ",
+    "problem": "node server.js\r\n",
+    "location": "📍 30.00787 , 31.123743",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٩:٠١:٣٩ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ٩:٠١:٤٦ ص",
+    "unreadAdmin": 1,
+    "images": [
+      "/uploads/1776582099650-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg"
+    ],
+    "chat": [
+      {
+        "sender": "👤 العميل",
+        "text": "node server.js",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٩:٠١:٤٥ ص"
+      },
+      {
+        "sender": "🛠 الإدارة",
+        "text": "✅ تم استلام رسالتك، سيتم الرد عليك خلال دقائق.",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٩:٠١:٤٦ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776582314414",
+    "phone": "92535711",
+    "service": "🆘 إنقاذ",
+    "problem": "node server.js\r\n",
+    "location": "📍 30.00787 , 31.123743",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ٩:٠٥:١٤ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ٩:٠٥:١٤ ص",
+    "unreadAdmin": 0,
+    "images": [
+      "/uploads/1776582314401-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "/uploads/1776582314405-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg"
+    ],
+    "chat": []
+  },
+  {
+    "id": "1776584990894",
+    "phone": "92535711",
+    "service": "⚡ شحن كهرباء",
+    "problem": "ىىىىىىىىىىىىى",
+    "location": "📍 30.007398999999996 , 31.123629499999996",
+    "status": "جارى التنفيذ",
+    "driver": "محمود",
+    "time": "١٩‏/٤‏/٢٠٢٦، ٩:٤٩:٥٠ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ١٠:٠٩:٣٨ ص",
+    "unreadAdmin": 1,
+    "images": [
+      "/uploads/1776584990880-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg"
+    ],
+    "chat": [
+      {
+        "sender": "👤 العميل",
+        "text": "ى       ى",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٩:٤٩:٥٦ ص"
+      },
+      {
+        "sender": "🛠 الإدارة",
+        "text": "<!DOCTYPE html> <html lang=\"ar\" dir=\"rtl\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> <title>✈️الـــمـــهـــري🚚ON THE🚚ROAD🛩️</title>  <script src=\"/socket.io/socket.io.js\"></script> <link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet/dist/leaflet.css\"> <script src=\"https://unpkg.com/leaflet/dist/leaflet.js\"></script>  <style> body{font-family:Tahoma;margin:0;background:#0f172a;color:#fff} header{background:#1e3a8a;text-align:center;padding:15px;position:relative} .lang-btn{position:absolute;left:10px;top:10px;background:#10b981;padding:5px 10px;border-radius:8px;cursor:pointer} .hero{position:relative;height:50vh;overflow:hidden} .hero-slide{position:absolute;width:100%;height:100%;background-size:cover;background-position:center;opacity:0;transition:1s;display:flex;justify-content:center;align-items:center} .hero-slide.active{opacity:1} .overlay{background:rgba(0,0,0,.5);padding:20px;border-radius:15px;text-align:center} .overlay button{background:#10b981;border:none;padding:12px 20px;border-radius:10px;color:#fff;cursor:pointer} .container{max-width:420px;margin:auto;padding:15px} .services{display:grid;grid-template-columns:1fr 1fr;gap:8px} .srv{background:#fff;color:#000;padding:10px;border-radius:10px;text-align:center;cursor:pointer} input,textarea,select{width:100%;padding:10px;margin:5px 0;border-radius:8px;border:none} button{background:#1e3a8a;color:#fff;border:none;padding:10px;border-radius:8px;width:100%;cursor:pointer}  .call,.whatsapp,.instagram{ margin-top:10px; padding:12px; text-align:center; border-radius:10px; color:#fff; text-decoration:none; display:block; cursor:pointer; font-weight:bold; transition:.3s; } .call{background:#ef4444} .whatsapp{background:#25D366} .instagram{ background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); animation:pulse 1.8s infinite; } .whatsapp:hover,.instagram:hover,.call:hover{transform:scale(1.03)}  @keyframes pulse{ 0%{transform:scale(1);box-shadow:0 0 0 0 rgba(225,48,108,.6)} 70%{transform:scale(1.02);box-shadow:0 0 0 12px rgba(225,48,108,0)} 100%{transform:scale(1);box-shadow:0 0 0 0 rgba(225,48,108,0)} }  small{display:block;margin-bottom:8px;font-size:12px;color:#ccc} #previewImages img{width:70px;margin:5px;border-radius:8px} #etaBox{ display:none; background:#10b981; margin:15px; padding:12px; border-radius:12px; text-align:center; font-size:15px; font-weight:bold; } #driverMap{height:280px;margin:15px;border-radius:15px;display:none}  .chat-toggle{ position:fixed; bottom:15px; right:15px; background:#10b981; padding:15px; border-radius:50%; cursor:pointer; font-size:20px }  .chat-box{ position:fixed; bottom:75px; right:15px; width:300px; background:#fff; color:#000; border-radius:15px; display:none; flex-direction:column; padding:10px; box-shadow:0 0 20px rgba(0,0,0,.3) }  .chat-messages{ height:180px; overflow:auto; background:#f1f1f1; padding:8px; border-radius:8px; margin-bottom:5px; font-size:13px }  .chat-messages div{ background:#10b981; color:#fff; padding:6px; margin:4px 0; border-radius:8px } </style> </head>  <body>  <header> <div class=\"lang-btn\" onclick=\"toggleLang()\">EN</div> <h2>✈️الـــمـــهـــري🚚ON THE🚚ROAD🛩️</h2> </header>  <section class=\"hero\"> <div class=\"hero-slide active\" style=\"background-image:url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2');\"> <div class=\"overlay\"> <h1 id=\"heroTitle\"></h1> <p id=\"heroSub\"></p> <button id=\"heroBtn\"></button> </div> </div> <div class=\"hero-slide\" style=\"background-image:url('https://images.unsplash.com/photo-1580273916550-e323be2ae537');\"></div> <div class=\"hero-slide\" style=\"background-image:url('https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b');\"></div> </section>  <div class=\"container\"> <h3 id=\"servicesTitle\"></h3>  <div class=\"services\"> <div class=\"srv\" id=\"srv1\"></div> <div class=\"srv\" id=\"srv2\"></div> <div class=\"srv\" id=\"srv3\"></div> <div class=\"srv\" id=\"srv4\"></div> <div class=\"srv\" id=\"srv5\"></div> <div class=\"srv\" id=\"srv6\"></div> <div class=\"srv\" id=\"srv7\"></div> <div class=\"srv\" id=\"srv8\"></div> </div>  <form onsubmit=\"sendOrder();return false;\"> <input id=\"phone\" required> <select id=\"service\"> <option value=\"\" id=\"opt0\"></option> <option id=\"opt1\"></option> <option id=\"opt2\"></option> <option id=\"opt3\"></option> <option id=\"opt4\"></option> <option id=\"opt5\"></option> <option id=\"opt6\"></option> <option id=\"opt7\"></option> <option id=\"opt8\"></option> </select>  <textarea id=\"problem\" required></textarea> <div id=\"locationText\"></div>  <label>📸 صور السيارة</label> <input type=\"file\" id=\"frontImg\" accept=\"image/*\"><small>🚗 أمام</small> <input type=\"file\" id=\"backImg\" accept=\"image/*\"><small>🚙 خلف</small> <input type=\"file\" id=\"rightImg\" accept=\"image/*\"><small>➡️ يمين</small> <input type=\"file\" id=\"leftImg\" accept=\"image/*\"><small>⬅️ يسار</small>  <div id=\"previewImages\"></div> <button type=\"submit\">إرسال</button> </form>  <a class=\"call\" href=\"tel:+201021259316\">📞 اتصال</a> <a class=\"whatsapp\" onclick=\"sendWhatsApp()\">📱 واتساب</a> <a class=\"instagram\" href=\"#\" onclick=\"openInstagram()\">📷 انستجرام</a> </div>  <div id=\"etaBox\"></div> <div id=\"driverMap\"></div>  <div class=\"chat-toggle\" onclick=\"toggleChat()\">💬</div>  <div class=\"chat-box\" id=\"chatBox\"> <div class=\"chat-messages\" id=\"chatMessages\"></div> <input id=\"chatInput\" placeholder=\"اكتب رسالتك...\"> <button onclick=\"sendChat()\">إرسال</button> </div>  <script> const socket=io(); let orderId=localStorage.getItem(\"orderId\")||null; let map=null; let driverMarker=null; let clientMarker=null; let routeLine=null; let clientLat=null; let clientLng=null; const whatsappNumber=\"201021259316\";  let currentLang=localStorage.getItem(\"lang\")||\"ar\"; const t={ ar:{title:\"🚗 خدمات الطريق\",sub:\"⚡ دعم سريع 24/7\",btn:\"اطلب الآن\",services:\"🛠️ خدماتنا\",phone:\"📱 رقم الهاتف\",problem:\"🛠️ اكتب المشكلة\", srv:[\"🚗 سحب السيارات\",\"🔋 بطارية\",\"🛞 إطارات\",\"⛽ وقود\",\"🔑 فتح السيارة\",\"🆘 إنقاذ\",\"🚚 نقل سيارات\",\"⚡ شحن كهرباء\"]}, en:{title:\"🚗 Road Services\",sub:\"⚡ 24/7 Support\",btn:\"Order Now\",services:\"🛠️ Our Services\",phone:\"📱 Phone Number\",problem:\"🛠️ Describe problem\", srv:[\"🚗 Car Towing\",\"🔋 Battery\",\"🛞 Tires\",\"⛽ Fuel\",\"🔑 Unlock Car\",\"🆘 Rescue\",\"🚚 Car Transport\",\"⚡ Electric Charging\"]} };  function applyLang(){ heroTitle.innerText=t[currentLang].title; heroSub.innerText=t[currentLang].sub; heroBtn.innerText=t[currentLang].btn; servicesTitle.innerText=t[currentLang].services; phone.placeholder=t[currentLang].phone; problem.placeholder=t[currentLang].problem; t[currentLang].srv.forEach((s,i)=>{ document.getElementById(\"srv\"+(i+1)).innerText=s; document.getElementById(\"opt\"+(i+1)).innerText=s; document.getElementById(\"opt\"+(i+1)).value=s; }); opt0.innerText=currentLang===\"ar\"?\"اختر الخدمة\":\"Choose service\"; document.body.dir=currentLang===\"ar\"?\"rtl\":\"ltr\"; document.querySelector(\".lang-btn\").innerText=currentLang===\"ar\"?\"EN\":\"AR\"; localStorage.setItem(\"lang\",currentLang); } function toggleLang(){currentLang=currentLang===\"ar\"?\"en\":\"ar\";applyLang();} applyLang();  let slides=document.querySelectorAll(\".hero-slide\"),slideIndex=0; setInterval(()=>{ slides.forEach(s=>s.classList.remove(\"active\")); slideIndex=(slideIndex+1)%slides.length; slides[slideIndex].classList.add(\"active\"); },4000);  navigator.geolocation.getCurrentPosition(p=>{ clientLat=p.coords.latitude; clientLng=p.coords.longitude; locationText.innerText=\"📍 \"+clientLat+\" , \"+clientLng; });  document.querySelectorAll(\"input[type='file']\").forEach(input=>{ input.addEventListener(\"change\",()=>{ previewImages.innerHTML=\"\"; document.querySelectorAll(\"input[type='file']\").forEach(f=>{ if(f.files[0]){ let img=document.createElement(\"img\"); img.src=URL.createObjectURL(f.files[0]); previewImages.appendChild(img); } }); }); });  function openInstagram(){ const username=\"almahri_ontheroad\"; window.location.href=\"instagram://user?username=\"+username; setTimeout(()=>window.open(\"https://instagram.com/\"+username,\"_blank\"),1500); }  async function sendOrder(openWA=false){ const formData=new FormData(); formData.append(\"phone\",phone.value); formData.append(\"service\",service.value); formData.append(\"problem\",problem.value); formData.append(\"location\",locationText.innerText);  [\"frontImg\",\"backImg\",\"rightImg\",\"leftImg\"].forEach(id=>{ if(document.getElementById(id).files[0]){ formData.append(id,document.getElementById(id).files[0]); } });  const res=await fetch(\"/api/order\",{method:\"POST\",body:formData}); const data=await res.json();  if(data.success){ orderId=data.orderId; localStorage.setItem(\"orderId\",orderId); socket.emit(\"joinRoom\",orderId);  if(openWA){ const msg=`طلب جديد\\nرقم الهاتف: ${phone.value}\\nالخدمة: ${service.value}\\nالمشكلة: ${problem.value}`; window.location.href=`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`; }else{ alert(\"✅ تم إرسال الطلب\"); } } }  function sendWhatsApp(){sendOrder(true);} document.querySelectorAll(\".srv\").forEach(e=>e.onclick=()=>service.value=e.innerText);  function toggleChat(){ chatBox.style.display=chatBox.style.display===\"flex\"?\"none\":\"flex\"; }  function sendChat(){ const msg=chatInput.value.trim(); if(!msg||!orderId)return; socket.emit(\"clientMessage\",{room:orderId,text:msg}); chatInput.value=\"\"; }  socket.on(\"newMessage\",data=>{ const div=document.createElement(\"div\"); div.innerText=data.sender+\": \"+data.text; chatMessages.appendChild(div); chatMessages.scrollTop=chatMessages.scrollHeight; });  function calcDistance(lat1,lon1,lat2,lon2){ const R=6371; const dLat=(lat2-lat1)*Math.PI/180; const dLon=(lon2-lon1)*Math.PI/180; const a=Math.sin(dLat/2)**2+Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)**2; return R*(2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))); }  function updateDriverMap(lat,lng,driverName,driverImage){ etaBox.style.display=\"block\"; driverMap.style.display=\"block\";  if(!map){ map=L.map(\"driverMap\").setView([lat,lng],13); L.tileLayer(\"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png\").addTo(map); driverMarker=L.marker([lat,lng]).addTo(map); clientMarker=L.marker([clientLat,clientLng]).addTo(map); }else{ driverMarker.setLatLng([lat,lng]); }  driverMarker.bindPopup(`<div style=\"text-align:center\"><img src=\"${driverImage}\" style=\"width:70px;height:70px;border-radius:50%\"><br>${driverName}</div>`);  if(routeLine) map.removeLayer(routeLine); routeLine=L.polyline([[lat,lng],[clientLat,clientLng]]).addTo(map);  const distance=calcDistance(lat,lng,clientLat,clientLng); const eta=Math.round((distance/50)*60);  etaBox.innerHTML=`🚚 السائق يبعد ${distance.toFixed(1)} كم — ⏳ الوصول خلال ${eta} دقيقة`;  map.fitBounds(routeLine.getBounds(),{padding:[30,30]}); }  socket.on(\"updateDriverLocation\",data=>{ updateDriverMap(data.lat,data.lng,data.driver,data.driverImage); });  if(orderId) socket.emit(\"joinRoom\",orderId); </script>  </body> </html>",
+        "time": "١٩‏/٤‏/٢٠٢٦، ٩:٥١:٢٧ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776586095426",
+    "phone": "92535711",
+    "service": "⚡ شحن كهرباء",
+    "problem": "للللللللل",
+    "location": "📍 30.007425477693637 , 31.12365878327707",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ١٠:٠٨:١٥ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ١٠:١٠:٢٥ ص",
+    "unreadAdmin": 2,
+    "images": [
+      "/uploads/1776586095415-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg"
+    ],
+    "chat": [
+      {
+        "sender": "👤 العميل",
+        "text": "لالالالالالالالالالالالالالالالالا",
+        "time": "١٩‏/٤‏/٢٠٢٦، ١٠:٠٨:٢٠ ص"
+      },
+      {
+        "sender": "👤 العميل",
+        "text": "ىىىىىىىىىىىىىىىىىىىى",
+        "time": "١٩‏/٤‏/٢٠٢٦، ١٠:١٠:٢٣ ص"
+      },
+      {
+        "sender": "🛠 الإدارة",
+        "text": "✅ تم استلام رسالتك، سيتم الرد عليك خلال دقائق.",
+        "time": "١٩‏/٤‏/٢٠٢٦، ١٠:١٠:٢٥ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776586460616",
+    "phone": "92535711",
+    "service": "⚡ شحن كهرباء",
+    "problem": "للللللللل",
+    "location": "📍 30.007425477693637 , 31.12365878327707",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ١٠:١٤:٢٠ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ١٠:١٤:٢٦ ص",
+    "unreadAdmin": 1,
+    "images": [
+      "/uploads/1776586460612-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg"
+    ],
+    "chat": [
+      {
+        "sender": "👤 العميل",
+        "text": "يييييييييييييييييييييييي",
+        "time": "١٩‏/٤‏/٢٠٢٦، ١٠:١٤:٢٥ ص"
+      },
+      {
+        "sender": "🛠 الإدارة",
+        "text": "✅ تم استلام رسالتك، سيتم الرد عليك خلال دقائق.",
+        "time": "١٩‏/٤‏/٢٠٢٦، ١٠:١٤:٢٦ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776588554872",
+    "phone": "92535711",
+    "service": "🔋 Battery",
+    "problem": "/?#",
+    "location": "📍 30.007883 , 31.12377",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ١٠:٤٩:١٤ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ١٠:٤٩:٢١ ص",
+    "unreadAdmin": 1,
+    "images": [
+      "/uploads/1776588554770-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "/uploads/1776588554780-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "/uploads/1776588554786-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "/uploads/1776588554845-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg"
+    ],
+    "chat": [
+      {
+        "sender": "👤 العميل",
+        "text": "/?#",
+        "time": "١٩‏/٤‏/٢٠٢٦، ١٠:٤٩:٢١ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776589520834",
+    "phone": "92535711",
+    "service": "🔋 Battery",
+    "problem": "/?#",
+    "location": "📍 30.007883 , 31.12377",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ١١:٠٥:٢٠ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ١١:٠٥:٢٠ ص",
+    "unreadAdmin": 0,
+    "images": [
+      "/uploads/1776589520784-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "/uploads/1776589520794-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "/uploads/1776589520801-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "/uploads/1776589520816-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg"
+    ],
+    "chat": []
+  },
+  {
+    "id": "1776590091576",
+    "phone": "92535711",
+    "service": "🔋 Battery",
+    "problem": "/?#",
+    "location": "📍 30.007883 , 31.12377",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ١١:١٤:٥١ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ١١:١٥:٠٧ ص",
+    "unreadAdmin": 1,
+    "images": [
+      "/uploads/1776590091546-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "/uploads/1776590091555-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "/uploads/1776590091560-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg",
+      "/uploads/1776590091569-WhatsApp Image 2026-02-26 at 8.13.06 PM.jpeg"
+    ],
+    "chat": [
+      {
+        "sender": "👤 العميل",
+        "text": "غغغ",
+        "time": "١٩‏/٤‏/٢٠٢٦، ١١:١٤:٥٥ ص"
+      },
+      {
+        "sender": "🛠 الإدارة",
+        "text": "نتققففغغ",
+        "time": "١٩‏/٤‏/٢٠٢٦، ١١:١٥:٠٧ ص"
+      }
+    ]
+  },
+  {
+    "id": "1776591366262",
+    "phone": "92535711",
+    "service": "🚚 نقل سيارات",
+    "problem": "Fuck",
+    "location": "",
+    "status": "جديد",
+    "driver": null,
+    "time": "١٩‏/٤‏/٢٠٢٦، ١١:٣٦:٠٥ ص",
+    "lastUpdate": "١٩‏/٤‏/٢٠٢٦، ١١:٣٦:٠٥ ص",
+    "unreadAdmin": 0,
+    "images": [
+      "/uploads/1776591340048-ED6BB29F-E297-4184-8A40-17C0689FD103.jpeg",
+      "/uploads/1776591363357-C38729AA-0ADA-4B24-990F-A7EF9E4FB749.jpeg",
+      "/uploads/1776591364617-9EAB0A0A-A5BD-4545-A6D3-8C0A010938AF.jpeg"
+    ],
+    "chat": []
+  }
+]

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✈️الـــمـــهـــري🚚ON THE🚚ROAD🛩️</title>
+
+<script src="/socket.io/socket.io.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<style>
+body{font-family:Tahoma;margin:0;background:#0f172a;color:#fff}
+header{background:#1e3a8a;text-align:center;padding:15px;position:relative}
+.lang-btn{position:absolute;left:10px;top:10px;background:#10b981;padding:5px 10px;border-radius:8px;cursor:pointer}
+.hero{position:relative;height:50vh;overflow:hidden}
+.hero-slide{position:absolute;width:100%;height:100%;background-size:cover;background-position:center;opacity:0;transition:1s;display:flex;justify-content:center;align-items:center}
+.hero-slide.active{opacity:1}
+.overlay{background:rgba(0,0,0,.5);padding:20px;border-radius:15px;text-align:center}
+.overlay button{background:#10b981;border:none;padding:12px 20px;border-radius:10px;color:#fff;cursor:pointer}
+.container{max-width:420px;margin:auto;padding:15px}
+.services{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.srv{background:#fff;color:#000;padding:10px;border-radius:10px;text-align:center;cursor:pointer}
+input,textarea,select{width:100%;padding:10px;margin:5px 0;border-radius:8px;border:none}
+button{background:#1e3a8a;color:#fff;border:none;padding:10px;border-radius:8px;width:100%;cursor:pointer}
+
+.call,.whatsapp,.instagram{
+margin-top:10px;
+padding:12px;
+text-align:center;
+border-radius:10px;
+color:#fff;
+text-decoration:none;
+display:block;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+}
+.call{background:#ef4444}
+.whatsapp{background:#25D366}
+.instagram{
+background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+animation:pulse 1.8s infinite;
+}
+.whatsapp:hover,.instagram:hover,.call:hover{transform:scale(1.03)}
+
+@keyframes pulse{
+0%{transform:scale(1);box-shadow:0 0 0 0 rgba(225,48,108,.6)}
+70%{transform:scale(1.02);box-shadow:0 0 0 12px rgba(225,48,108,0)}
+100%{transform:scale(1);box-shadow:0 0 0 0 rgba(225,48,108,0)}
+}
+
+small{display:block;margin-bottom:8px;font-size:12px;color:#ccc}
+#previewImages img{width:70px;margin:5px;border-radius:8px}
+#etaBox{
+display:none;
+background:#10b981;
+margin:15px;
+padding:12px;
+border-radius:12px;
+text-align:center;
+font-size:15px;
+font-weight:bold;
+}
+#driverMap{height:280px;margin:15px;border-radius:15px;display:none}
+
+.chat-toggle{
+position:fixed;
+bottom:15px;
+right:15px;
+background:#10b981;
+padding:15px;
+border-radius:50%;
+cursor:pointer;
+font-size:20px
+}
+
+.chat-box{
+position:fixed;
+bottom:75px;
+right:15px;
+width:300px;
+background:#fff;
+color:#000;
+border-radius:15px;
+display:none;
+flex-direction:column;
+padding:10px;
+box-shadow:0 0 20px rgba(0,0,0,.3)
+}
+
+.chat-messages{
+height:180px;
+overflow:auto;
+background:#f1f1f1;
+padding:8px;
+border-radius:8px;
+margin-bottom:5px;
+font-size:13px
+}
+
+.chat-messages div{
+background:#10b981;
+color:#fff;
+padding:6px;
+margin:4px 0;
+border-radius:8px
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="lang-btn" onclick="toggleLang()">EN</div>
+<h2>✈️الـــمـــهـــري🚚ON THE🚚ROAD🛩️</h2>
+</header>
+
+<section class="hero">
+<div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2');">
+<div class="overlay">
+<h1 id="heroTitle"></h1>
+<p id="heroSub"></p>
+<button id="heroBtn"></button>
+</div>
+</div>
+<div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1580273916550-e323be2ae537');"></div>
+<div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b');"></div>
+</section>
+
+<div class="container">
+<h3 id="servicesTitle"></h3>
+
+<div class="services">
+<div class="srv" id="srv1"></div>
+<div class="srv" id="srv2"></div>
+<div class="srv" id="srv3"></div>
+<div class="srv" id="srv4"></div>
+<div class="srv" id="srv5"></div>
+<div class="srv" id="srv6"></div>
+<div class="srv" id="srv7"></div>
+<div class="srv" id="srv8"></div>
+</div>
+
+<form onsubmit="sendOrder();return false;">
+<input id="phone" required>
+<select id="service">
+<option value="" id="opt0"></option>
+<option id="opt1"></option>
+<option id="opt2"></option>
+<option id="opt3"></option>
+<option id="opt4"></option>
+<option id="opt5"></option>
+<option id="opt6"></option>
+<option id="opt7"></option>
+<option id="opt8"></option>
+</select>
+
+<textarea id="problem" required></textarea>
+<div id="locationText"></div>
+
+<label>📸 صور السيارة</label>
+<input type="file" id="frontImg" accept="image/*"><small>🚗 أمام</small>
+<input type="file" id="backImg" accept="image/*"><small>🚙 خلف</small>
+<input type="file" id="rightImg" accept="image/*"><small>➡️ يمين</small>
+<input type="file" id="leftImg" accept="image/*"><small>⬅️ يسار</small>
+
+<div id="previewImages"></div>
+<button type="submit">إرسال</button>
+</form>
+
+<a class="call" href="tel:+201021259316">📞 اتصال</a>
+<a class="whatsapp" onclick="sendWhatsApp()">📱 واتساب</a>
+<a class="instagram" href="#" onclick="openInstagram()">📷 انستجرام</a>
+</div>
+
+<div id="etaBox"></div>
+<div id="driverMap"></div>
+
+<div class="chat-toggle" onclick="toggleChat()">💬</div>
+
+<div class="chat-box" id="chatBox">
+<div class="chat-messages" id="chatMessages"></div>
+<input id="chatInput" placeholder="اكتب رسالتك...">
+<button onclick="sendChat()">إرسال</button>
+</div>
+
+<script>
+const socket=io();
+let orderId=localStorage.getItem("orderId")||null;
+let map=null;
+let driverMarker=null;
+let clientMarker=null;
+let routeLine=null;
+let clientLat=null;
+let clientLng=null;
+const whatsappNumber="201021259316";
+
+let currentLang=localStorage.getItem("lang")||"ar";
+const t={
+ar:{title:"🚗 خدمات الطريق",sub:"⚡ دعم سريع 24/7",btn:"اطلب الآن",services:"🛠️ خدماتنا",phone:"📱 رقم الهاتف",problem:"🛠️ اكتب المشكلة",
+srv:["🚗 سحب السيارات","🔋 بطارية","🛞 إطارات","⛽ وقود","🔑 فتح السيارة","🆘 إنقاذ","🚚 نقل سيارات","⚡ شحن كهرباء"]},
+en:{title:"🚗 Road Services",sub:"⚡ 24/7 Support",btn:"Order Now",services:"🛠️ Our Services",phone:"📱 Phone Number",problem:"🛠️ Describe problem",
+srv:["🚗 Car Towing","🔋 Battery","🛞 Tires","⛽ Fuel","🔑 Unlock Car","🆘 Rescue","🚚 Car Transport","⚡ Electric Charging"]}
+};
+
+function applyLang(){
+heroTitle.innerText=t[currentLang].title;
+heroSub.innerText=t[currentLang].sub;
+heroBtn.innerText=t[currentLang].btn;
+servicesTitle.innerText=t[currentLang].services;
+phone.placeholder=t[currentLang].phone;
+problem.placeholder=t[currentLang].problem;
+t[currentLang].srv.forEach((s,i)=>{
+document.getElementById("srv"+(i+1)).innerText=s;
+document.getElementById("opt"+(i+1)).innerText=s;
+document.getElementById("opt"+(i+1)).value=s;
+});
+opt0.innerText=currentLang==="ar"?"اختر الخدمة":"Choose service";
+document.body.dir=currentLang==="ar"?"rtl":"ltr";
+document.querySelector(".lang-btn").innerText=currentLang==="ar"?"EN":"AR";
+localStorage.setItem("lang",currentLang);
+}
+function toggleLang(){currentLang=currentLang==="ar"?"en":"ar";applyLang();}
+applyLang();
+
+let slides=document.querySelectorAll(".hero-slide"),slideIndex=0;
+setInterval(()=>{
+slides.forEach(s=>s.classList.remove("active"));
+slideIndex=(slideIndex+1)%slides.length;
+slides[slideIndex].classList.add("active");
+},4000);
+
+navigator.geolocation.getCurrentPosition(p=>{
+clientLat=p.coords.latitude;
+clientLng=p.coords.longitude;
+locationText.innerText="📍 "+clientLat+" , "+clientLng;
+});
+
+document.querySelectorAll("input[type='file']").forEach(input=>{
+input.addEventListener("change",()=>{
+previewImages.innerHTML="";
+document.querySelectorAll("input[type='file']").forEach(f=>{
+if(f.files[0]){
+let img=document.createElement("img");
+img.src=URL.createObjectURL(f.files[0]);
+previewImages.appendChild(img);
+}
+});
+});
+});
+
+function openInstagram(){
+const username="almahri_ontheroad";
+window.location.href="instagram://user?username="+username;
+setTimeout(()=>window.open("https://instagram.com/"+username,"_blank"),1500);
+}
+
+async function sendOrder(openWA=false){
+const formData=new FormData();
+formData.append("phone",phone.value);
+formData.append("service",service.value);
+formData.append("problem",problem.value);
+formData.append("location",locationText.innerText);
+
+["frontImg","backImg","rightImg","leftImg"].forEach(id=>{
+if(document.getElementById(id).files[0]){
+formData.append(id,document.getElementById(id).files[0]);
+}
+});
+
+const res=await fetch("/api/order",{method:"POST",body:formData});
+const data=await res.json();
+
+if(data.success){
+orderId=data.orderId;
+localStorage.setItem("orderId",orderId);
+socket.emit("joinRoom",orderId);
+
+if(openWA){
+const msg=`طلب جديد\nرقم الهاتف: ${phone.value}\nالخدمة: ${service.value}\nالمشكلة: ${problem.value}`;
+window.location.href=`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
+}else{
+alert("✅ تم إرسال الطلب");
+}
+}
+}
+
+function sendWhatsApp(){sendOrder(true);}
+document.querySelectorAll(".srv").forEach(e=>e.onclick=()=>service.value=e.innerText);
+
+function toggleChat(){
+chatBox.style.display=chatBox.style.display==="flex"?"none":"flex";
+}
+
+function sendChat(){
+const msg=chatInput.value.trim();
+if(!msg||!orderId)return;
+socket.emit("clientMessage",{room:orderId,text:msg});
+chatInput.value="";
+}
+
+socket.on("newMessage",data=>{
+const div=document.createElement("div");
+div.innerText=data.sender+": "+data.text;
+chatMessages.appendChild(div);
+chatMessages.scrollTop=chatMessages.scrollHeight;
+});
+
+function calcDistance(lat1,lon1,lat2,lon2){
+const R=6371;
+const dLat=(lat2-lat1)*Math.PI/180;
+const dLon=(lon2-lon1)*Math.PI/180;
+const a=Math.sin(dLat/2)**2+Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)**2;
+return R*(2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a)));
+}
+
+function updateDriverMap(lat,lng,driverName,driverImage){
+etaBox.style.display="block";
+driverMap.style.display="block";
+
+if(!map){
+map=L.map("driverMap").setView([lat,lng],13);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+driverMarker=L.marker([lat,lng]).addTo(map);
+clientMarker=L.marker([clientLat,clientLng]).addTo(map);
+}else{
+driverMarker.setLatLng([lat,lng]);
+}
+
+driverMarker.bindPopup(`<div style="text-align:center"><img src="${driverImage}" style="width:70px;height:70px;border-radius:50%"><br>${driverName}</div>`);
+
+if(routeLine) map.removeLayer(routeLine);
+routeLine=L.polyline([[lat,lng],[clientLat,clientLng]]).addTo(map);
+
+const distance=calcDistance(lat,lng,clientLat,clientLng);
+const eta=Math.round((distance/50)*60);
+
+etaBox.innerHTML=`🚚 السائق يبعد ${distance.toFixed(1)} كم — ⏳ الوصول خلال ${eta} دقيقة`;
+
+map.fitBounds(routeLine.getBounds(),{padding:[30,30]});
+}
+
+socket.on("updateDriverLocation",data=>{
+updateDriverMap(data.lat,data.lng,data.driver,data.driverImage);
+});
+
+if(orderId) socket.emit("joinRoom",orderId);
+</script>
+
+</body>
+</html>
